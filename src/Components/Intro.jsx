@@ -16,9 +16,8 @@ function Intro() {
         DEVELOPER
       </p>
       <p className="text-yellow-100 text-base font-semibold">
-        I am a highly skilled and motivated front-end developer with a passion
-        for creating visually stunning and intuitive websites and web
-        applications
+        Highly skilled and motivated front-end developer with a passion for
+        creating visually stunning and intuitive websites and web applications
       </p>
     </motion.div>
   );
