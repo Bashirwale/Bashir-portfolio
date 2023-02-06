@@ -8,7 +8,7 @@ import ButtonMailto from "../Components/ButtonMailto";
 function Contact() {
   return (
     <motion.div
-      className="text-yellow-100 p-8 md:px-32 mx-auto h-screen"
+      className="text-yellow-100 bg-black px-8 py-20 md:pb-52 md:px-32 mx-auto h-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exist={{ opacity: 0 }}
@@ -28,7 +28,7 @@ function Contact() {
           mailto="mailto:bashabdulbash@gmail.com"
         />
       </div>
-      <div className="grid grid-cols-2 gap-4 px-6 md:grid-cols-4 md:px-16 mt-10 mb-16 mx-auto">
+      <div className="grid grid-cols-2 gap-4 px-6 md:grid-cols-4 md:px-16 mt-12 mb-16 mx-auto">
         <a
           href="https://www.linkedin.com/in/bashir-abdullahi-856861246"
           target="_blank"

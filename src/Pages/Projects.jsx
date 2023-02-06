@@ -58,7 +58,7 @@ function Projects() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exist={{ opacity: 0 }}
-      className="text-yellow-100 p-8 mb-16 mx-auto"
+      className="text-yellow-100 px-8 py-12 md:pb-20 mx-auto h-full"
     >
       <h3 className="text-yellow-400 text-xl text-center font-bold mb-2">
         My Projects
@@ -67,7 +67,7 @@ function Projects() {
         Take a look at my work samples to see the impact I have made for my
         clients, and feel free to contact me for more information.
       </p>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
+      <div className="grid grid-cols-1 mb-6 gap-4 md:grid-cols-2 ">
         {projects.map((project) => (
           <Project
             key={project.name}

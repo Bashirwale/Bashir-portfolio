@@ -6,7 +6,7 @@ import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="relative bg-black opacity-90 h-full transition-all duration-500">
+    <div className="relative bg-black opacity-90 ">
       <Router>
         <Header />
         <AnimatedRoutes />

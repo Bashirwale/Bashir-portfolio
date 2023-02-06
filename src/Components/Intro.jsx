@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 function Intro() {
   return (
     <motion.div
-      className="h-screen py-16 px-8 md:w-3/5"
+      className="h-full pt-40 pb-56 md:pb-72 px-8 md:w-3/5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exist={{ opacity: 0 }}
