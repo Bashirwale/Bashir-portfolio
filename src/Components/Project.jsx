@@ -1,34 +1,64 @@
-import React from "react";
-import PropTypes from "prop-types";
+/* eslint-disable no-sequences */
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import client from "../client";
 
-function Project({ name, description, image, link }) {
+function Project() {
+  const [dataProjects, setDataProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const query = `*[_type == "project"]{
+          _id,
+          mainImage {
+            asset->{
+              url
+            }
+          }
+        }`;
+        const response = await client.fetch(query);
+        setDataProjects(response); // Store the fetched data in state
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const LoadingSkeleton = () => {
+    return (
+      <div className="rounded-md w-full h-56 md:h-64 animate-pulse bg-gray-300"></div>
+    );
+  };
+
   return (
     <>
-      <a
-        href={link}
-        target="_blank"
-        rel="noreferrer"
-        className="relative h-72 mt-4 border rounded-md"
-      >
-        <div className="absolute w-full h-full  bg-black opacity-80 text-center p-16 hover:hidden transition-all duration-500">
-          <h3 className="text-yellow-400 font-black text-xl md:text-3xl mb-2">
-            {name}
-          </h3>
-          <p className="text-yellow-100 font-bold sm:text-xs text-base">
-            {description}
-          </p>
-        </div>
-
-        <img className="rounded-md w-full h-full" src={image} alt={name} />
-      </a>
+      {loading ? (
+        <LoadingSkeleton />
+      ) : (
+        dataProjects.map((project) => (
+          <div key={project._id}>
+            {project.mainImage && project.mainImage.asset && (
+              <img
+                className="rounded-md w-full h-56 md:h-64 shadow-md shadow-yellow-100 border border-slate-900"
+                src={project.mainImage.asset.url}
+                alt={project.title}
+              />
+            )}
+            <Link
+              to={`/projects/${project._id}`}
+              className="bg-yellow-100 text-center p-2 text-slate-900 font-bold text-base mt-2 rounded"
+            >
+              View Project
+            </Link>
+          </div>
+        ))
+      )}
     </>
   );
 }
-Project.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-};
 
 export default Project;

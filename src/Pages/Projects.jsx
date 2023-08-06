@@ -1,82 +1,23 @@
 import Project from "../Components/Project";
-import contactList from "../assets/contactList.PNG";
-import blackjack from "../assets/blackjack.PNG";
-import expenseapp from "../assets/expense-app.PNG";
-import feedback from "../assets/feedback.PNG";
-import housemarketplace from "../assets/housemarket.PNG";
-import musicaApp from "../assets/musica-app.PNG";
-import kingsleyeze from "../assets/kingsleyeze.PNG";
 import { motion } from "framer-motion";
 
 function Projects() {
-  const projects = [
-    {
-      name: "Contact-List-app",
-      description: "Creates contact list from random user api",
-      image: contactList,
-      link: "https://contact-l-ist-app.vercel.app/",
-    },
-    {
-      name: "expense-tracker-app",
-      description: "Tracker your monthly expenses",
-      image: expenseapp,
-      link: "https://expense-tracker-app-gilt.vercel.app/",
-    },
-    {
-      name: "housemarket-place-app",
-      description: "You sell and rent your house",
-      image: housemarketplace,
-      link: "https://house-marketplace-app-mu.vercel.app/",
-    },
-    {
-      name: "Feedback-app",
-      description: "gets users feedback",
-      image: feedback,
-      link: "https://incredible-crumble-ce59ef.netlify.app/",
-    },
-    {
-      name: "Blackjact-Game",
-      description: "play blackjack",
-      image: blackjack,
-      link: "https://bashirwale.github.io/black-jack/",
-    },
-    {
-      name: "Musica-app",
-      description: "Music player",
-      image: musicaApp,
-      link: "https://stupendous-cactus-a0f587.netlify.app/",
-    },
-    {
-      name: "kingsley-Ukeje",
-      description: "A clone of kingsley Ukeje portfolio website",
-      image: kingsleyeze,
-      link: "https://bashirwale.github.io/updatedkingsley-/",
-    },
-  ];
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exist={{ opacity: 0 }}
-      className="text-yellow-100 px-8 py-12 md:pb-20 mx-auto h-full"
+      className="text-yellow-100 px-5 sm:px-6 md:px-8 lg:px-12 pt-6 mb-24"
     >
-      <h3 className="text-yellow-400 text-xl text-center font-bold mb-2">
+      <h3 className="text-yellow-500 text-3xl text-center font-bold mb-2">
         My Projects
       </h3>
-      <p className="text-base text-center font-medium">
+      <p className="text-sm md:text-base text-center font-medium mb-4">
         Take a look at my work samples to see the impact I have made for my
         clients, and feel free to contact me for more information.
       </p>
-      <div className="grid grid-cols-1 mb-6 gap-4 md:grid-cols-2 ">
-        {projects.map((project) => (
-          <Project
-            key={project.name}
-            name={project.name}
-            description={project.description}
-            image={project.image}
-            link={project.link}
-          />
-        ))}
+      <div className="grid grid-cols-1 gap-4 md:gap-6  sm:grid-cols-2 lg:grid-cols-3">
+        <Project />
       </div>
     </motion.div>
   );

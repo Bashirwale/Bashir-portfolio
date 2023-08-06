@@ -4,4 +4,6 @@
 @tailwind utilities;
 body {
   font-family: "Roboto";
+  @apply bg-slate-900;
+  @apply h-full;
 }

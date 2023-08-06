@@ -2,56 +2,61 @@ import { motion } from "framer-motion";
 function About() {
   return (
     <motion.div
-      className="h-full md:h-screen text-yellow-100  mb-4 pt-8 pb-44 px-8  flex-col flex md:flex-row md:gap-4 md:px-14 md:items-start"
+      className="mt-4 py-4 px-5 sm:px-6 md:px-8 lg:px-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exist={{ opacity: 0 }}
     >
-      <div className="mb-4 md:w-3/5">
-        <h3 className="text-yellow-400 text-xl text-center font-bold mb-2">
+      <div className="text-yellow-100 font-normal">
+        <h3 className="text-yellow-500 text-3xl text-center font-bold mb-4">
           Get to Know me
         </h3>
 
-        <p className="sm:text-xs text-sm md:text-base">
-          Hello, my name is Bashir, I'm a Front-End Web Developer from Nigeria,
-          I have a degree in Information and Communication Science. I'm
-          interested in building the Front-end of Websites and Web Applications
-          that leads to the success of the overall product and I'm always open
-          to discussing new projects and opportunities to collaborate. My goal
-          is to provide seamless and engaging user experiences that drive
-          business results.If you have a good opportunity that matches my skills
-          and experience then don't hesitate to contact me.
+        <p className="text-sm md:text-base leading-6">
+          A Front-end engineer on a mission to build exceptional web
+          experiences. With a strong foundation in HTML, CSS, and JavaScript, I
+          bring creativity and attention to detail to every project I work on.
+        </p>
+        <p className="text-sm md:text-base leading-6">
+          I believe in the power of collaboration and enjoy working with diverse
+          teams to create seamless user interfaces. When I'm not coding, I'm
+          likely watching or playing football.
+        </p>
+        <p className="text-sm md:text-base leading-6">
+          I'm always excited to connect with fellow developers and discuss
+          potential collaborations. Let's connect and create something amazing
+          together!. You can also explore my work and projects in detail.
         </p>
       </div>
-      <div className="md:w-2/4 h-full">
-        <h3 className="text-yellow-400 text-xl font-bold mb-2">My Skills</h3>
-        <ul className="grid grid-cols-3 gap-2">
-          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-yellow-900 bg-yellow-400">
-            HTML
+      <div className="mt-6 mb-16">
+        <h3 className="text-yellow-500 text-xl font-bold mb-4">My Skills</h3>
+        <ul className="grid grid-cols-3 gap-3">
+          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-slate-900 bg-yellow-500 shadow-md shadow-yellow-200">
+            React JS
           </li>
-          <li className="text-yellow-400 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 ">
-            CSS
+          <li className="text-slate-900 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 shadow-md shadow-yellow-300">
+            Typescript
           </li>
-          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-yellow-900 bg-yellow-400 ">
+          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-slate-900 bg-yellow-500 shadow-md shadow-yellow-200 ">
             JavaScript
           </li>
-          <li className="text-yellow-400 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 ">
+          <li className="text-slate-900 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 shadow-md shadow-yellow-300">
+            HTML
+          </li>
+          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-slate-900 bg-yellow-500 shadow-md shadow-yellow-200">
+            CSS
+          </li>
+          <li className="text-slate-900 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 shadow-md shadow-yellow-300">
             SASS
           </li>
-          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-yellow-900 bg-yellow-400 ">
-            Tailwind
+          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-slate-900 bg-yellow-500 shadow-md shadow-yellow-200">
+            Tailwind CSS
           </li>
-          <li className="text-yellow-400 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 ">
-            React
+          <li className="text-slate-900 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 shadow-md shadow-yellow-300 ">
+            Firebase Store
           </li>
-          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-yellow-900 bg-yellow-400 ">
-            Github
-          </li>
-          <li className="text-yellow-400 text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center bg-yellow-200 ">
-            Responsive Design
-          </li>
-          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-yellow-900 bg-yellow-400 ">
-            Terminal
+          <li className="text-sm md:text-base font-medium rounded-md p-1 md:p-2 text-center text-slate-900 bg-yellow-500 shadow-md shadow-yellow-200">
+            Styled Component
           </li>
         </ul>
       </div>
