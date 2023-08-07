@@ -11,21 +11,22 @@ function About() {
         <h3 className="text-yellow-500 text-3xl text-center font-bold mb-4">
           Get to Know me
         </h3>
-
         <p className="text-sm md:text-base leading-6">
-          A Front-end engineer on a mission to build exceptional web
-          experiences. With a strong foundation in HTML, CSS, and JavaScript, I
+          A Front-end engineer on a mission to build exceptional web experiI
           bring creativity and attention to detail to every project I work on.
         </p>
         <p className="text-sm md:text-base leading-6">
           I believe in the power of collaboration and enjoy working with diverse
-          teams to create seamless user interfaces. When I'm not coding, I'm
-          likely watching or playing football.
+          teams to create seamless user interfaces.
         </p>
         <p className="text-sm md:text-base leading-6">
-          I'm always excited to connect with fellow developers and discuss
-          potential collaborations. Let's connect and create something amazing
-          together!. You can also explore my work and projects in detail.
+          When I'm not coding, I'm likely watching or playing football.I'm
+          always excited to connect with fellow developers and discuss potential
+          collaborations.
+        </p>
+        <p className="text-sm md:text-base leading-6">
+          Let's connect and create something amazing together!. You can also
+          explore my work and projects in detail.
         </p>
       </div>
       <div className="mt-6 mb-16">
