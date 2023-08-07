@@ -7,3 +7,6 @@ body {
   @apply bg-slate-900;
   @apply h-full;
 }
+.text-vw {
+  font-size: 10vw;
+}
